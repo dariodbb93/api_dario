@@ -6,9 +6,9 @@ namespace WebApiDario
     public class MainController : ApiController
     {
         [HttpPost]
-        public IHttpActionResult InviaMessaggio([FromBody] MessaggioModel model)
+        public string InviaMessaggio([FromBody] MessaggioModel model)
         {
-            return Ok(model.Messaggio);
+            return model.Messaggio;
 
         }
 
